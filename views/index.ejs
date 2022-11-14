@@ -4,10 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blogger</title>
+    <title><%= title %></title>
   </head>
   <body>
-    <h1>My Node Blog</h1>
-    <h3>All Current Blogs</h3>
+    <h1>My Blog, Created with Node.js!</h1>
+    <h2>All Current Blogs</h2>
+    <% if (blogs.length > 0) { %>
+    <ol>
+      <% blogs.forEach(ele => { %>
+      <li>
+        <h3><%= ele.title %></h3>
+        <h4><%= ele.summary %></h4>
+        <a href="/<%= ele._id %>">Click to View</a>
+      </li>
+      <hr />
+      <% }) %> <% } else { %>
+      <p>There are currently no blogs to display.</p>
+      <% } %>
+    </ol>
   </body>
 </html>

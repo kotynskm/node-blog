@@ -12,7 +12,7 @@ const app = express();
 app.set('view engine', 'ejs');
 
 // routers
-app.use('/api/v1/blogs', blogRouter);
+app.use('/', blogRouter);
 
 // export app
 module.exports = app;
