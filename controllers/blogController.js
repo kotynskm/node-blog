@@ -27,4 +27,12 @@ exports.deleteBlog = async (req, res) => {
     .catch((err) => console.log(err));
 };
 
-exports.createBlog = async (req, res) => {};
+exports.createBlog = (req, res) => {
+  const blog = new Blog(req.body);
+  blog
+    .save()
+    .then((response) => {
+      res.redirect('/');
+    })
+    .catch((err) => console.log(err));
+};

@@ -29,6 +29,16 @@
       <% } %>
     </ol>
     <h2>Submit a New Blog!</h2>
-    <form action="/create" method="POST"></form>
+    <div class="blog-entry">
+      <form action="/create" method="POST">
+        <label for="title">Enter a Title:</label>
+        <input type="text" id="title" name="title" required />
+        <label for="summary">Enter a Short Description:</label>
+        <input type="text" id="summary" name="summary" required />
+        <label for="content">Blog Content:</label>
+        <textarea id="content" name="content" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   </body>
 </html>
