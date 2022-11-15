@@ -20,9 +20,11 @@ exports.getBlog = async (req, res) => {
 };
 
 exports.deleteBlog = async (req, res) => {
-  await Blog.deleteOne({ _id: req.params.id })
+  await Blog.findByIdAndDelete(req.params.id)
     .then((response) => {
       res.redirect('/');
     })
     .catch((err) => console.log(err));
 };
+
+exports.createBlog = async (req, res) => {};

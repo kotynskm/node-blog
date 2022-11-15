@@ -17,7 +17,7 @@
     <p><%= blog.content %></p>
     <a href="/edit">Edit Post</a>
     <br />
-    <!-- to delete a blog, we need the route and id in a form -->>
+    <!-- to delete a blog, we need the route and id in a form -->
     <form action="/delete/<%= blog._id %>" method="POST">
       <button type="submit">Delete</button>
     </form>
