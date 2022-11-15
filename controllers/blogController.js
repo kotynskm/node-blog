@@ -18,3 +18,11 @@ exports.getBlog = async (req, res) => {
     blog,
   });
 };
+
+exports.deleteBlog = async (req, res) => {
+  await Blog.deleteOne({ _id: req.params.id })
+    .then((response) => {
+      res.redirect('/');
+    })
+    .catch((err) => console.log(err));
+};
