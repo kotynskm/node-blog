@@ -10,8 +10,6 @@ This is a blog web app that was created to facilitate learning Node.js, Express.
 
 **Languages/Frameworks/Database:** JavaScript, Node.js, Express.js, MongoDB, mongoose, HTML, CSS, EJS
 
-## About the Developer
-
 # <a name="about"></a>Learn More About the Developer
 
 **GitHub:** https://github.com/kotynskm
