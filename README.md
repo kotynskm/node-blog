@@ -6,6 +6,27 @@
 
 This is a blog web app that was created to facilitate learning Node.js, Express.js, MongoDB, and RESTful API design/development. It features CRUD - four essential operations for creating and managing data elements in a NoSQl database.
 
+---
+
+## Features
+
+- Create a new blog
+- View all current blogs, view a selected blog
+- Edit/Update a blog post
+- Delete a blog post
+
+Dashboard page:
+
+<img src="/public/img/dash.png">
+
+A blogs content page:
+
+<img src="/public/img/blog.png">
+
+Edit page for a blog:
+
+<img src="/public/img/edit.png">
+
 ## Technologies
 
 **Languages/Frameworks/Database:** JavaScript, Node.js, Express.js, MongoDB, mongoose, HTML, CSS, EJS
