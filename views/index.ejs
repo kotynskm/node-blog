@@ -4,41 +4,73 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://example.com/image.svg"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Advent+Pro&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+    <!-- CSS Styles -->
+    <link rel="stylesheet" type="text/css" href="/styles.css" />
     <title><%= title %></title>
   </head>
   <body>
-    <h1>My Blog, Created with Node.js!</h1>
-    <h2>All Current Blogs</h2>
-    <% if (blogs.length > 0) { %>
-    <ol>
-      <% blogs.forEach(ele => { %>
-      <li>
-        <h3><%= ele.title %></h3>
-        <h4><%= ele.summary %></h4>
-        <a href="/<%= ele._id %>">Click to View</a>
-      </li>
+    <div class="container-fluid">
+      <h1>My Blog, created with Node.js!</h1>
       <hr />
-      <% }) %> <% } else { %>
-      <p>There are currently no blogs to display.</p>
-      <% } %>
-    </ol>
-    <h2>Submit a New Blog!</h2>
-    <div class="blog-entry">
-      <form action="/create" method="POST">
-        <label for="title">Enter a Title:</label>
-        <input type="text" id="title" name="title" required />
-        <label for="summary">Enter a Short Description:</label>
-        <input type="text" id="summary" name="summary" required />
-        <label for="content">Blog Content:</label>
-        <textarea id="content" name="content" required></textarea>
-        <button type="submit">Submit</button>
-      </form>
+      <div class="row">
+        <div class="col">
+          <h2><strong>All Current Blogs:</strong></h2>
+          <% if (blogs.length > 0) { %>
+          <ol>
+            <% blogs.forEach(ele => { %>
+            <li>
+              <h3><%= ele.title %></h3>
+              <h4><%= ele.summary %></h4>
+              <form action="/<%= ele._id %>" method="GET">
+                <button type="submit" class="btn btn-dark">
+                  Click to View
+                </button>
+              </form>
+            </li>
+            <hr />
+            <% }) %> <% } else { %>
+            <p>There are currently no blogs to display.</p>
+            <% } %>
+          </ol>
+        </div>
+        <div class="col">
+          <h2><strong>Submit a New Blog:</strong></h2>
+          <div class="blog-entry">
+            <form action="/create" method="POST">
+              <label for="title">Enter a Title:</label>
+              <input type="text" id="title" name="title" required />
+              <label for="summary">Enter a Short Description:</label>
+              <input type="text" id="summary" name="summary" required />
+              <label for="content">Blog Content:</label>
+              <br />
+              <textarea id="content" name="content" required></textarea>
+              <br />
+              <button type="submit" class="btn btn-dark">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

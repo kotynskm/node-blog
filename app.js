@@ -13,6 +13,9 @@ const app = express();
 app.set('view engine', 'ejs');
 
 // middleware
+// serve static files
+app.use(express.static(path.join(__dirname, 'public')));
+// morgan
 app.use(morgan('dev'));
 // to parse data returned from the front end form - needed to parse the data returned from the create route
 app.use(express.urlencoded({ extended: true }));
