@@ -4,7 +4,7 @@
 
 # Project Overview
 
-This is a blog web app that was created to facilitate learning Node.js, Express.js, MongoDB, and RESTful API design/development. It features CRUD - four essential operations for creating and managing data elements in a NoSQL database.
+This is a blog app created with Node.js, Express.js, MongoDB, and RESTful API design/development. It features CRUD - four essential operations for creating and managing data elements in a NoSQL database.
 
 ---
 
