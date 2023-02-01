@@ -36,4 +36,4 @@ Edit page for a blog:
 **GitHub:** https://github.com/kotynskm
 **LinkedIn:** https://www.linkedin.com/in/kkotynski
 **Medium:** https://medium.com/@k.kotynski
-**Portfolio:** https://kotynskm.github.io/portfolio-website/
+**Portfolio:** https://kaileykotynski.netlify.app
